@@ -1,6 +1,6 @@
 "use client";
 
-import { Utensils, CakeSlice, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import cafeImg from "../../public/Imagem/cafedamanha.png";
@@ -49,16 +49,10 @@ export default function OfferingsPreview() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
           {offerings.map((item, idx) => (
             <div key={idx} className="bg-brand-straw rounded-3xl border border-brand-woodLight/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 flex flex-col text-center overflow-hidden">
-              {item.image ? (
-                <div className="w-full h-40 md:h-48 relative mb-6">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" />
-                </div>
-              ) : (
-                <div className="flex justify-center mt-8 mb-4">
-                  {item.icon}
-                </div>
-              )}
-              <div className={`px-8 pb-8 ${!item.image ? "pt-0" : ""}`}>
+              <div className="w-full h-40 md:h-48 relative mb-6">
+                <Image src={item.image} alt={item.title} fill className="object-cover" />
+              </div>
+              <div className="px-8 pb-8">
                 <h4 className="font-bold text-brand-coffeeDark text-xl mb-3">{item.title}</h4>
                 <p className="text-brand-coffee/80 leading-relaxed text-sm">
                   {item.desc}
