@@ -1,3 +1,5 @@
+"use client";
+
 import { MapPin, Navigation, Clock, Phone, Map } from "lucide-react";
 import Image from "next/image";
 import pinIcon from "../../public/Imagem/pinlocalizacao.webp";

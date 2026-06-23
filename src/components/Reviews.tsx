@@ -1,3 +1,5 @@
+"use client";
+
 import { Star, MapPin } from "lucide-react";
 import Image from "next/image";
 import pinIcon from "../../public/Imagem/pinlocalizacao.webp";
