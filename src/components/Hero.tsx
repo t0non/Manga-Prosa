@@ -68,7 +68,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("click_whatsapp")}
-                className="flex items-center justify-center gap-2 bg-white text-brand-coffeeDark border border-brand-woodLight hover:border-brand-wood px-6 py-3.5 rounded-full font-bold transition-all shadow-sm w-full sm:w-auto text-base"
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-6 py-3.5 rounded-full font-bold transition-all shadow-md w-full sm:w-auto text-base"
               >
                 <WhatsAppIcon className="w-5 h-5 shrink-0" />
                 Chamar no WhatsApp

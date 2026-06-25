@@ -51,7 +51,7 @@ export default function TargetAudience() {
         {/* Heading — texto puro, sem imagem dentro */}
         <div className="text-center mb-10">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-white leading-relaxed mb-3">
-            Foi pro Aquabeat? Passa aqui antes ou depois
+            Foi pro Aquabeat? Passa aqui sô!
           </h2>
           {/* Logo Aquabeat como elemento decorativo, fora do heading */}
           <div className="flex items-center justify-center gap-3">

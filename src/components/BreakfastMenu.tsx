@@ -131,7 +131,7 @@ export default function BreakfastMenu() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('click_cardapio_whatsapp')}
-            className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-[#A84F28] text-[#FFF7ED] px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-brand-orange/20 md:hover:-translate-y-1 w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg md:hover:-translate-y-1 w-full sm:w-auto"
             aria-label="Chamar o restaurante no WhatsApp"
           >
             <WhatsAppIcon className="w-5 h-5" />

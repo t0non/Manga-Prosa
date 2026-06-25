@@ -84,7 +84,7 @@ export default function Lunch() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click_consultar_almoco")}
-            className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-[#A84F28] text-[#FFF7ED] px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5"
             aria-label="Consultar almoço no WhatsApp"
           >
             <WhatsAppIcon className="w-5 h-5" />

@@ -79,7 +79,7 @@ export default function Menu() {
             href="https://wa.me/5531990893313?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Manga%20%26%20Prosa%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-transparent border-2 border-brand-coffee text-brand-coffee hover:bg-brand-coffee hover:text-[#FFF7ED] px-8 py-4 rounded-full font-bold transition-all shadow-sm md:hover:-translate-y-1"
+            className="inline-block bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-full font-bold transition-all shadow-sm md:hover:-translate-y-1"
             aria-label="Ver Cardápio Completo no WhatsApp"
           >
             Ver Cardápio Completo no WhatsApp

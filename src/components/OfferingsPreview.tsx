@@ -1,4 +1,5 @@
 import { Coffee, Utensils, Soup, CakeSlice } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function OfferingsPreview() {
   const items = [
@@ -64,8 +65,9 @@ export default function OfferingsPreview() {
             href="https://wa.me/5531990893313?text=Ol%C3%A1%2C%20quais%20s%C3%A3o%20as%20op%C3%A7%C3%B5es%20de%20marmitex%20hoje%3F"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-white border border-brand-woodDark text-brand-coffeeDark px-8 py-3.5 rounded-full font-bold hover:border-brand-orange transition-colors w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-3.5 rounded-full font-bold transition-colors w-full sm:w-auto"
           >
+            <WhatsAppIcon className="w-5 h-5" />
             Chamar no WhatsApp
           </a>
         </div>
