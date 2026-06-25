@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown, Users, Info } from "lucide-react";
+import Image from "next/image";
+import { Users, Info, Salad, Dessert } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
+import pratoImg from "../../public/Imagem/prato.png";
 
 const cateringData = [
   {
@@ -232,12 +233,6 @@ const cateringData = [
 ];
 
 export default function CateringMenu() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   const trackEvent = (eventName: string) => {
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", eventName);
@@ -268,81 +263,83 @@ export default function CateringMenu() {
           </div>
         </div>
 
-        {/* Menu Accordion */}
-        <div className="max-w-[900px] mx-auto space-y-4 mb-16" role="list">
+        {/* Menu Grid - Everything Open */}
+        <div className="max-w-[1000px] mx-auto space-y-12 mb-16">
           {cateringData.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-brand-woodLight overflow-hidden shadow-sm hover:shadow-md transition-shadow" role="listitem">
-              <button
-                onClick={() => toggleAccordion(i)}
-                className="w-full flex items-center justify-between p-5 md:p-6 text-left bg-white transition-colors"
-                aria-expanded={openIndex === i}
-              >
-                <div>
-                  <span className="font-bold text-brand-coffeeDark text-xl block">{item.day}</span>
-                  {item.theme && (
-                    <span className="text-brand-orange font-medium text-sm mt-1 block">{item.theme}</span>
-                  )}
-                </div>
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === i ? 'bg-brand-orange text-white' : 'bg-brand-straw text-brand-coffeeDark'}`}>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""}`} />
-                </div>
-              </button>
+            <div key={i} className="bg-white rounded-3xl border border-brand-woodLight shadow-sm overflow-hidden">
               
-              <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === i ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"}`}
-              >
-                <div className="p-6 pt-0 border-t border-brand-woodLight/30 mt-2">
-                  <div className="grid md:grid-cols-2 gap-8 mt-4">
-                    
-                    {/* Pratos Principais */}
-                    <div>
-                      <h4 className="font-bold text-brand-coffeeDark text-lg mb-4 flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-brand-orange"></span>
-                        Pratos Principais
-                      </h4>
-                      <ul className="space-y-2">
-                        {item.pratosPrincipais.map((prato, idx) => (
-                          <li key={idx} className="text-brand-coffee text-sm md:text-base border-b border-brand-woodLight/30 pb-2 last:border-0">
-                            {prato}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+              {/* Dia Centralizado */}
+              <div className="bg-brand-coffeeDark text-brand-straw py-6 text-center border-b-4 border-brand-orange">
+                <h3 className="font-serif text-3xl md:text-4xl font-bold">
+                  {item.day}
+                </h3>
+                {item.theme && (
+                  <p className="text-brand-orange font-medium mt-2 text-lg tracking-wide uppercase">
+                    {item.theme}
+                  </p>
+                )}
+              </div>
+              
+              <div className="p-8 md:p-10">
+                <div className="grid md:grid-cols-2 gap-10">
+                  
+                  {/* Pratos Principais */}
+                  <div>
+                    <h4 className="font-bold text-brand-coffeeDark text-xl mb-6 flex items-center gap-3 pb-3 border-b border-brand-woodLight/50">
+                      <Image 
+                        src={pratoImg} 
+                        alt="Ícone de Prato" 
+                        width={28} 
+                        height={28} 
+                        className="object-contain" 
+                      />
+                      Pratos Principais
+                    </h4>
+                    <ul className="space-y-3">
+                      {item.pratosPrincipais.map((prato, idx) => (
+                        <li key={idx} className="text-brand-coffee text-base font-medium flex items-start gap-2">
+                          <span className="text-brand-orange font-bold mt-0.5">•</span>
+                          {prato}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    {/* Saladas e Sobremesas */}
-                    <div className="space-y-8">
-                      {item.saladas.length > 0 && (
-                        <div>
-                          <h4 className="font-bold text-brand-coffeeDark text-lg mb-4 flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
-                            Saladas
-                          </h4>
-                          <ul className="space-y-2">
-                            {item.saladas.map((salada, idx) => (
-                              <li key={idx} className="text-brand-coffee text-sm md:text-base border-b border-brand-woodLight/30 pb-2 last:border-0">
-                                {salada}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                  {/* Saladas e Sobremesas */}
+                  <div className="space-y-10">
+                    {item.saladas.length > 0 && (
+                      <div>
+                        <h4 className="font-bold text-brand-coffeeDark text-xl mb-6 flex items-center gap-3 pb-3 border-b border-brand-woodLight/50">
+                          <Salad className="w-7 h-7 text-[#25D366]" />
+                          Saladas
+                        </h4>
+                        <ul className="space-y-3">
+                          {item.saladas.map((salada, idx) => (
+                            <li key={idx} className="text-brand-coffee text-base font-medium flex items-start gap-2">
+                              <span className="text-[#25D366] font-bold mt-0.5">•</span>
+                              {salada}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
-                      {item.sobremesas.length > 0 && (
-                        <div>
-                          <h4 className="font-bold text-brand-coffeeDark text-lg mb-4 flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#FFB020]"></span>
-                            Sobremesas
-                          </h4>
-                          <ul className="space-y-2">
-                            {item.sobremesas.map((sobremesa, idx) => (
-                              <li key={idx} className="text-brand-coffee text-sm md:text-base border-b border-brand-woodLight/30 pb-2 last:border-0">
-                                {sobremesa}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
+                    {item.sobremesas.length > 0 && (
+                      <div>
+                        <h4 className="font-bold text-brand-coffeeDark text-xl mb-6 flex items-center gap-3 pb-3 border-b border-brand-woodLight/50">
+                          <Dessert className="w-7 h-7 text-[#FFB020]" />
+                          Sobremesas
+                        </h4>
+                        <ul className="space-y-3">
+                          {item.sobremesas.map((sobremesa, idx) => (
+                            <li key={idx} className="text-brand-coffee text-base font-medium flex items-start gap-2">
+                              <span className="text-[#FFB020] font-bold mt-0.5">•</span>
+                              {sobremesa}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
