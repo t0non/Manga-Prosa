@@ -33,7 +33,7 @@ export default function Header() {
           <div className="relative w-36 md:w-48 h-16 md:h-20">
             <Image
               src={logoImg}
-              alt="Manga & Prosa Logo"
+              alt="Logo do restaurante Manga e Prosa em Confins MG"
               fill
               className="object-contain object-center md:object-left"
               priority
@@ -42,7 +42,7 @@ export default function Header() {
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8 font-bold text-[15px] text-brand-coffee">
+        <nav aria-label="Menu principal" className="hidden md:flex items-center gap-8 font-bold text-[15px] text-brand-coffee">
           <a href="#sobre" className="hover:text-brand-orange transition-colors">Sobre</a>
           <a href="#ambiente" className="hover:text-brand-orange transition-colors">Ambiente</a>
           <a href="#cardapio" className="hover:text-brand-orange transition-colors">Cardápio</a>
@@ -80,7 +80,7 @@ export default function Header() {
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <nav className="flex flex-col gap-6 text-xl font-bold text-brand-coffeeDark">
+        <nav aria-label="Menu mobile" className="flex flex-col gap-6 text-xl font-bold text-brand-coffeeDark">
           <a href="#sobre" onClick={() => setIsMobileMenuOpen(false)} className="border-b border-brand-woodLight/50 pb-4">Sobre</a>
           <a href="#ambiente" onClick={() => setIsMobileMenuOpen(false)} className="border-b border-brand-woodLight/50 pb-4">Ambiente</a>
           <a href="#cardapio" onClick={() => setIsMobileMenuOpen(false)} className="border-b border-brand-woodLight/50 pb-4">Cardápio</a>

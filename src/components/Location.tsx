@@ -8,8 +8,8 @@ export default function Location() {
     <section id="localizacao" className="py-16 md:py-24 relative border-y border-brand-woodLight/50 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image src={locationBg} alt="Manga e Prosa" fill className="object-cover" />
-        <div className="absolute inset-0 bg-white/80" />
+        <Image src={locationBg} alt="Fachada do restaurante Manga e Prosa na MG-424, Confins MG" fill className="object-cover" />
+        <div className="absolute inset-0 bg-black/65" />
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 relative z-10">
@@ -18,11 +18,11 @@ export default function Location() {
           
           {/* Info */}
           <div className="flex-1 w-full text-center lg:text-left">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-coffeeDark mb-6 leading-tight">
-              Na beira da MG-424, pertim do Aquabeat
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Onde comer em Confins na beira da MG-424
             </h2>
-            <p className="text-brand-coffee text-[15px] md:text-lg mb-8 leading-relaxed font-medium">
-              O Manga & Prosa fica em Lagoa dos Mares, Confins - MG. Uma parada fácil e gostosa pra quem tá pela região, indo ou voltando do Aquabeat, ou procurando comida caseira e marmitex por perto.
+            <p className="text-white/85 text-[15px] md:text-lg mb-8 leading-relaxed font-medium">
+              O Manga & Prosa fica em Lagoa dos Mares, Confins - MG, na MG-424, número 119. Uma parada fácil pra quem está indo ou voltando do Aquabeat, trabalhando pela região ou procurando almoço caseiro por perto.
             </p>
 
             <div className="bg-white p-6 rounded-2xl border border-brand-woodLight shadow-sm mb-8 text-left">
@@ -48,7 +48,7 @@ export default function Location() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
               <a
                 href="https://www.google.com/maps/search/?api=1&query=MG-424%2C%20119%20-%20Lagoa%20dos%20Mares%2C%20Confins%20-%20MG%2C%2033500-000"
                 target="_blank"
@@ -66,6 +66,13 @@ export default function Location() {
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 Chamar no WhatsApp
+              </a>
+              <a
+                href="tel:+5531990893313"
+                className="flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white border border-white/40 px-6 py-3.5 rounded-full font-bold transition-colors shadow-md w-full sm:w-auto"
+              >
+                <Phone className="w-5 h-5" />
+                Ligar agora
               </a>
             </div>
           </div>

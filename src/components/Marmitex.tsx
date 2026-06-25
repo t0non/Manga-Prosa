@@ -27,13 +27,13 @@ export default function Marmitex() {
           
           {/* Text Content */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-2">Praticidade e Sabor</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-brand-straw mb-6 leading-tight">
-              Marmitex em Confins com comida caseira
-            </h3>
+            <p className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-2">Praticidade e Sabor</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-brand-straw mb-6 leading-tight">
+              Marmitex em Confins bem servida
+            </h2>
             
             <p className="text-lg text-brand-woodLight leading-relaxed mb-8">
-              Para quem quer comer bem sem complicar, o Manga & Prosa também oferece marmitex com combinações que podem variar durante a semana: arroz, feijão, carnes, legumes, saladas, macarrão, farofa e acompanhamentos do dia.
+              Pra quem trabalha pela região ou quer levar comida caseira pra casa, a marmitex do Manga & Prosa é feita no capricho. Arroz, feijão, carne, legumes, salada e acompanhamentos fresquinhos do dia. Chama no WhatsApp e consulta as opções.
             </p>
 
             {/* CTAs */}
@@ -44,10 +44,10 @@ export default function Marmitex() {
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("click_marmitex_whatsapp")}
                 className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-[#A84F28] text-[#FFF7ED] px-6 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5"
-                aria-label="Pedir informações no WhatsApp"
+                aria-label="Consultar marmitex no WhatsApp"
               >
                 <WhatsAppIcon className="w-5 h-5" />
-                Pedir no WhatsApp
+                Consultar marmitex no WhatsApp
               </a>
               
               <Link

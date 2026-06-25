@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="w-full h-[40vh] relative md:hidden">
           <Image
             src={heroImg}
-            alt="Manga & Prosa comida caseira"
+            alt="Restaurante Manga e Prosa em Confins MG — comida caseira mineira na beira da MG-424"
             fill
             priority
             className="object-cover object-center"
@@ -99,7 +99,7 @@ export default function Hero() {
           <div className="relative w-full h-[90%] max-h-[600px] rounded-3xl overflow-hidden shadow-2xl">
             <Image
               src={heroImg}
-              alt="Manga & Prosa"
+              alt="Ambiente do restaurante Manga e Prosa em Confins MG, comida caseira mineira perto do Aquabeat"
               fill
               priority
               className="object-cover object-center hover:scale-105 transition-transform duration-700"

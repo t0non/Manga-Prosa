@@ -17,13 +17,13 @@ export default function QuickChoices() {
   return (
     <section className="py-12 bg-brand-straw relative z-20 overflow-hidden">
       
-      {/* Efeito Café no lado esquerdo em cima */}
-      <div className="absolute top-0 -left-16 md:-top-10 md:-left-16 w-48 h-64 md:w-56 md:h-80 opacity-100 blur-[2px] pointer-events-none z-30 drop-shadow-xl">
+      {/* Efeito Café no lado esquerdo em cima — sutil */}
+      <div className="absolute top-0 -left-10 md:-top-6 md:-left-10 w-32 h-44 md:w-40 md:h-56 opacity-20 blur-[1px] pointer-events-none z-30">
         <Image src={efeitoCafeImg} alt="" fill className="object-contain" />
       </div>
 
-      {/* Garfo no lado direito embaixo */}
-      <div className="absolute -bottom-24 -right-16 md:-bottom-48 md:-right-32 w-64 h-80 md:w-80 md:h-[450px] opacity-100 pointer-events-none -rotate-12 z-30 drop-shadow-xl">
+      {/* Garfo no lado direito embaixo — sutil */}
+      <div className="absolute -bottom-16 -right-10 md:-bottom-32 md:-right-20 w-40 h-52 md:w-56 md:h-[320px] opacity-15 pointer-events-none -rotate-12 z-30">
         <Image src={garfoImg} alt="" fill className="object-contain" />
       </div>
 

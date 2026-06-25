@@ -17,12 +17,12 @@ export default function FinalCTA() {
           Café quentin, almoço caseiro, marmitex bem servida e um lugar tranquilo pra você parar na beira da MG-424, em Confins.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
           <a
             href="https://www.google.com/maps/search/?api=1&query=MG-424%2C%20119%20-%20Lagoa%20dos%20Mares%2C%20Confins%20-%20MG%2C%2033500-000"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-[#A84F28] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-lg"
+            className="flex items-center justify-center gap-2 bg-white text-brand-orange hover:bg-brand-straw px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-lg"
           >
             <Map className="w-5 h-5" />
             Como chegar
@@ -35,6 +35,13 @@ export default function FinalCTA() {
           >
             <WhatsAppIcon className="w-5 h-5" />
             Chamar no WhatsApp
+          </a>
+          <a
+            href="tel:+5531990893313"
+            className="flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white border border-white/40 px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5 w-full sm:w-auto text-lg"
+          >
+            <Phone className="w-5 h-5" />
+            Ligar agora
           </a>
         </div>
         

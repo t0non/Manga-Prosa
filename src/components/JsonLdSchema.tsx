@@ -1,13 +1,62 @@
 export default function JsonLdSchema() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mangaeprosa.com.br"; // TODO: Inserir domínio real
-  
-  const organizationSchema = {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://manga-prosa-gm2j.vercel.app";
+
+  const restaurantSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "Restaurant",
     "name": "Manga & Prosa",
     "url": siteUrl,
-    "logo": `${siteUrl}/icon.png`, // TODO: Inserir URL real do logo
-    // "sameAs": [] // TODO: Adicionar links das redes sociais (Instagram, Facebook)
+    "image": [
+      `${siteUrl}/Imagem/fora1.jpg`,
+      `${siteUrl}/Imagem/fora2.jpg`,
+      `${siteUrl}/Imagem/dentro1.jpg`
+    ],
+    "telephone": "+5531990893313",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "MG-424, 119 - Lagoa dos Mares",
+      "addressLocality": "Confins",
+      "addressRegion": "MG",
+      "postalCode": "33500-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-19.6278",
+      "longitude": "-43.9925"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:00",
+        "closes": "16:00"
+      }
+    ],
+    "servesCuisine": [
+      "Comida mineira",
+      "Comida caseira",
+      "Café da manhã",
+      "Almoço caseiro",
+      "Marmitex",
+      "Lanches",
+      "Sobremesas"
+    ],
+    "priceRange": "$$",
+    "areaServed": [
+      "Confins",
+      "Lagoa dos Mares",
+      "MG-424",
+      "São José da Lapa",
+      "Vespasiano",
+      "Lagoa Santa",
+      "Região do Aquabeat"
+    ],
+    "hasMenu": `${siteUrl}/cardapio`,
+    "description": "Restaurante de comida caseira mineira em Confins - MG, na MG-424, 119 - Lagoa dos Mares. Café da manhã, almoço caseiro, marmitex, lanches e sobremesas. Pertim do Aquabeat.",
+    "currenciesAccepted": "BRL",
+    "paymentAccepted": "Dinheiro, Pix, Cartão",
+    "keywords": "restaurante em Confins, comida caseira Confins, almoço Confins MG, marmitex Confins, café da manhã Confins, restaurante perto Aquabeat, restaurante MG-424, onde comer Confins"
   };
 
   const webSiteSchema = {
@@ -15,60 +64,12 @@ export default function JsonLdSchema() {
     "@type": "WebSite",
     "name": "Manga & Prosa",
     "url": siteUrl,
-    "description": "Restaurante em Confins - MG. Comida regional, ambiente acolhedor e familiar na Lagoa dos Mares."
-  };
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Manga & Prosa",
-    "url": siteUrl,
-    "taxID": "61.574.605/0001-80",
-    // "image": `${siteUrl}/fachada.jpg`, // TODO: Inserir URL real da imagem
-    "telephone": "+5531990893313",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG-424, 119 - Lagoa dos Mares",
-      "addressLocality": "Confins",
-      "addressRegion": "MG",
-      "postalCode": "33500-000",
-      "addressCountry": "BR"
-    },
-    // "geo": {
-    //   "@type": "GeoCoordinates",
-    //   "latitude": "", // TODO: Inserir latitude real
-    //   "longitude": "" // TODO: Inserir longitude real
-    // },
-    // "openingHoursSpecification": [
-    //   {
-    //     "@type": "OpeningHoursSpecification",
-    //     "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    //     "opens": "11:00",
-    //     "closes": "16:00"
-    //   }
-    // ],
-    // "sameAs": [] // TODO: Adicionar Google Business Profile etc.
-  };
-
-  const restaurantSchema = {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Manga & Prosa",
-    "url": siteUrl,
-    // "image": `${siteUrl}/fachada.jpg`, // TODO: Inserir URL real da imagem principal do restaurante
-    "telephone": "+5531990893313",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "MG-424, 119 - Lagoa dos Mares",
-      "addressLocality": "Confins",
-      "addressRegion": "MG",
-      "postalCode": "33500-000",
-      "addressCountry": "BR"
-    },
-    "servesCuisine": "Comida mineira, comida caseira",
-    "priceRange": "$$",
-    "areaServed": "Confins, Lagoa dos Mares, MG-424, região do Aquabeat",
-    "hasMenu": `${siteUrl}/#cardapio`
+    "description": "Restaurante em Confins - MG. Comida caseira mineira, café da manhã, almoço bem servido e marmitex na beira da MG-424, pertim do Aquabeat.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/cardapio`,
+      "query-input": "required name=search_term_string"
+    }
   };
 
   const breadcrumbSchema = {
@@ -78,8 +79,14 @@ export default function JsonLdSchema() {
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Manga & Prosa",
+        "name": "Manga & Prosa — Restaurante em Confins MG",
         "item": siteUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cardápio — Café, Almoço e Marmitex",
+        "item": `${siteUrl}/cardapio`
       }
     ]
   };
@@ -93,7 +100,7 @@ export default function JsonLdSchema() {
         "name": "Onde fica o Manga & Prosa?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O Manga & Prosa fica na MG-424, 119 - Lagoa dos Mares, em Confins - MG, pertim do Aquabeat."
+          "text": "O Manga & Prosa fica na MG-424, 119 - Lagoa dos Mares, em Confins - MG, CEP 33500-000. Um lugar fácil de achar e ótimo pra estacionar e comer bem."
         }
       },
       {
@@ -101,50 +108,63 @@ export default function JsonLdSchema() {
         "name": "O Manga & Prosa fica perto do Aquabeat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, o Manga & Prosa fica na região da MG-424 e pode ser uma parada gostosa para quem está indo ou voltando do Aquabeat. Para confirmar a rota certinha, clique em “Como chegar”."
+          "text": "Sim, o Manga & Prosa fica na beira da MG-424, bem pertim do Aquabeat, em Confins - MG. É uma parada gostosa pra quem está indo ou voltando do parque aquático."
         }
       },
       {
         "@type": "Question",
-        "name": "O Manga & Prosa serve almoço em Confins?",
+        "name": "Onde comer perto do Aquabeat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. O restaurante oferece almoço caseiro, pratos do dia e opções com aquele tempero mineiro, conforme a disponibilidade."
+          "text": "O Manga & Prosa é uma ótima opção para comer perto do Aquabeat em Confins - MG. Fica na beira da MG-424, número 119, com comida caseira mineira, café da manhã, almoço e marmitex bem servida."
         }
       },
       {
         "@type": "Question",
-        "name": "Tem marmitex no Manga & Prosa?",
+        "name": "Tem almoço caseiro em Confins?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. O Manga & Prosa oferece opções de marmitex em Confins. As combinações podem variar durante a semana, então o ideal é consultar pelo WhatsApp."
+          "text": "Sim. O Manga & Prosa serve almoço caseiro em Confins, com comida feita no fogão a lenha: arroz, feijão, carne, legumes, salada e acompanhamentos fresquinhos do dia."
         }
       },
       {
         "@type": "Question",
-        "name": "Tem café da manhã e lanches?",
+        "name": "Tem marmitex em Confins?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. O Manga & Prosa é uma opção para café da manhã, lanches, salgados, pão de queijo e uma parada rápida na MG-424."
+          "text": "Sim. O Manga & Prosa oferece marmitex bem servida em Confins. As combinações variam durante a semana. Consulte as opções do dia pelo WhatsApp: (31) 99089-3313."
         }
       },
       {
         "@type": "Question",
-        "name": "Como falar com o Manga & Prosa?",
+        "name": "Tem café da manhã perto do Aquabeat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Você pode chamar pelo WhatsApp ou ligar para (31) 99089-3313."
+          "text": "Sim. O Manga & Prosa serve café da manhã na MG-424 em Confins, pertim do Aquabeat. Tem café passado na hora, pão de queijo quentinho, salgados e quitandas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como faço para chegar ao Manga & Prosa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Manga & Prosa fica na MG-424, número 119, no bairro Lagoa dos Mares, em Confins - MG. Basta buscar 'Manga & Prosa Confins' no Google Maps ou abrir a rota diretamente pelo site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual o telefone do Manga & Prosa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O telefone e WhatsApp do Manga & Prosa é (31) 99089-3313. Você pode ligar ou enviar mensagem para consultar o cardápio do dia, marmitex e informações."
         }
       }
     ]
   };
 
-  // Combinando os schemas em um array
   const jsonLdData = [
-    organizationSchema,
-    webSiteSchema,
-    localBusinessSchema,
     restaurantSchema,
+    webSiteSchema,
     breadcrumbSchema,
     faqSchema
   ];
@@ -152,7 +172,7 @@ export default function JsonLdSchema() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData, null, 0) }}
     />
   );
 }

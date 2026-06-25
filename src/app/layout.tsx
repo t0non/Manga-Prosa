@@ -13,31 +13,29 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mangaeprosa.com.br"; // TODO: Atualizar para o domínio real
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://manga-prosa-gm2j.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Manga & Prosa | Restaurante em Confins perto do Aquabeat",
-  description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex bem servida no Manga & Prosa.",
+  description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro mineiro, lanches, sobremesas e marmitex bem servida no Manga & Prosa.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Manga & Prosa | Restaurante em Confins perto do Aquabeat",
-    description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex bem servida no Manga & Prosa.",
+    description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro mineiro, lanches, sobremesas e marmitex bem servida no Manga & Prosa.",
     url: siteUrl,
     siteName: "Manga & Prosa",
     locale: "pt_BR",
     type: "website",
-    // TODO: Adicionar imagens reais para o Open Graph
-    // images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Fachada do Manga & Prosa em Confins MG" }],
+    images: [{ url: "/Imagem/fora1.jpg", width: 1200, height: 630, alt: "Restaurante Manga & Prosa na MG-424, Confins MG — comida caseira mineira perto do Aquabeat" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Manga & Prosa | Restaurante em Confins perto do Aquabeat",
-    description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex no Manga & Prosa. Veja a rota.",
-    // TODO: Adicionar imagens reais para o Twitter Card
-    // images: ["/twitter-image.jpg"],
+    description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro mineiro, lanches, sobremesas e marmitex no Manga & Prosa.",
+    images: ["/Imagem/fora1.jpg"],
   },
   robots: {
     index: true,
