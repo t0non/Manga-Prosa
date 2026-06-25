@@ -3,7 +3,7 @@
 import { Coffee, Utensils, Wheat, CupSoda, MapPin, MessageCircle, Phone, Cookie } from "lucide-react";
 import Image from "next/image";
 import pinIcon from "../../public/Imagem/pinlocalizacao.webp";
-import wppIcon from "../../public/Imagem/icone do whatsapp.png";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function BreakfastMenu() {
   const trackEvent = (eventName: string) => {
@@ -134,7 +134,7 @@ export default function BreakfastMenu() {
             className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-[#A84F28] text-[#FFF7ED] px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-brand-orange/20 md:hover:-translate-y-1 w-full sm:w-auto"
             aria-label="Chamar o restaurante no WhatsApp"
           >
-            <Image src={wppIcon} alt="WhatsApp" width={20} height={20} className="brightness-0 invert" />
+            <WhatsAppIcon className="w-5 h-5" />
             Chamar no WhatsApp
           </a>
 

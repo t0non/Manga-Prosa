@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAFAFA; /* Off-white background */
+  --background: #FFFFFF; /* Pure white background */
   --foreground: #5E3F2C; /* coffee */
 }
 
@@ -11,15 +11,18 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   
-  /* Brand Palette - Updated to be lighter / whiter */
-  --color-brand-straw: #FDFBF7; /* Lighter warm white */
-  --color-brand-strawDark: #F3EFE9; /* Very subtle warm gray/beige */
-  --color-brand-woodLight: #E2D9CE; /* Lightest wood/beige */
+  /* Brand Palette - Clean White */
+  --color-white: #FFFFFF; 
+  --color-brand-straw: #FFFFFF; /* Alterado para branco a pedido do usuário */
+  --color-brand-strawDark: #FFFFFF; /* Alterado para branco a pedido do usuário */
+  --color-brand-woodLight: #E2D9CE;
   --color-brand-wood: #C7A887;
   --color-brand-woodDark: #85674E;
   --color-brand-coffee: #5E3F2C;
   --color-brand-coffeeDark: #3F2A1D;
-  --color-brand-orange: #C06132;
+  --color-brand-orange: #D97743;
+  --color-brand-green: #4A6741;
+  --color-brand-greenLight: #E8F0E5;
 }
 
 @media (prefers-color-scheme: dark) {

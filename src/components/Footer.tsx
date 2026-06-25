@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Camera, Globe, MapPin, Phone, MessageCircle, Map } from "lucide-react";
-import wppIcon from "../../public/Imagem/icone do whatsapp.png";
+import WhatsAppIcon from "./WhatsAppIcon";
 import logoImg from "../../public/Imagem/logo.png";
 import pinIcon from "../../public/Imagem/pinlocalizacao.webp";
 import topLogo from "../../public/Imagem/topmarketinglogo.jpg";
@@ -48,7 +48,7 @@ export default function Footer() {
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-full font-bold transition-all shadow-xl shadow-[#25D366]/20 md:hover:-translate-y-1"
                 aria-label="Chamar no WhatsApp"
               >
-                <Image src={wppIcon} alt="WhatsApp" width={20} height={20} className="brightness-0 invert" />
+                <WhatsAppIcon className="w-5 h-5" />
                 Chamar no WhatsApp
               </a>
               <a

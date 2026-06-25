@@ -65,17 +65,10 @@ export default function JsonLdSchema() {
       "postalCode": "33500-000",
       "addressCountry": "BR"
     },
-    // "servesCuisine": "Brasileira Regional", // TODO: Preencher com a culinária real exata
-    // "priceRange": "$$", // TODO: Preencher priceRange adequado (ex: $$, $$$)
-    // "geo": {
-    //   "@type": "GeoCoordinates",
-    //   "latitude": "", // TODO: Inserir latitude real
-    //   "longitude": "" // TODO: Inserir longitude real
-    // },
-    // "openingHoursSpecification": [
-    //   // TODO: Preencher horários de funcionamento
-    // ],
-    // "sameAs": [] // TODO: Adicionar Instagram, Google Business Profile e outras redes
+    "servesCuisine": "Comida mineira, comida caseira",
+    "priceRange": "$$",
+    "areaServed": "Confins, Lagoa dos Mares, MG-424, região do Aquabeat",
+    "hasMenu": `${siteUrl}/#cardapio`
   };
 
   const breadcrumbSchema = {

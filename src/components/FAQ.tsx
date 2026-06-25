@@ -4,70 +4,58 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
+  const questions = [
     {
-      question: "Onde fica o Manga & Prosa?",
-      answer: "O Manga & Prosa fica na MG-424, 119 - Lagoa dos Mares, em Confins - MG, pertim do Aquabeat."
+      q: "Onde fica o Manga & Prosa?",
+      a: "A gente fica bem na beira da MG-424, número 119, no bairro Lagoa dos Mares em Confins - MG. Um lugar fácil de achar e ótimo pra estacionar e comer bem."
     },
     {
-      question: "O Manga & Prosa fica perto do Aquabeat?",
-      answer: "Sim, o Manga & Prosa fica na região da MG-424 e pode ser uma parada gostosa para quem está indo ou voltando do Aquabeat. Para confirmar a rota certinha, clique em “Como chegar”."
+      q: "Fica pertim do Aquabeat mesmo?",
+      a: "Pertim demais da conta! Se você tá indo ou voltando do Aquabeat e bateu aquela fome, é só dar uma paradinha aqui com a gente. Fica bem no caminho da MG-424."
     },
     {
-      question: "O Manga & Prosa serve almoço em Confins?",
-      answer: "Sim. O restaurante oferece almoço caseiro, pratos do dia e opções com aquele tempero mineiro, conforme a disponibilidade."
+      q: "Vocês servem almoço caseiro todos os dias?",
+      a: "Servimos um almoço com aquele tempero de roça. Como preparamos tudo fresquinho no dia, as opções variam, mas sempre tem uma comida boa no fogão a lenha te esperando."
     },
     {
-      question: "Tem marmitex no Manga & Prosa?",
-      answer: "Sim. O Manga & Prosa oferece opções de marmitex em Confins. As combinações podem variar durante a semana, então o ideal é consultar pelo WhatsApp."
+      q: "Tem opção de marmitex pra levar?",
+      a: "Tem sim! Nossas marmitex são super bem servidas. É a escolha certa pra quem tá trabalhando na região ou quer levar nosso tempero pra casa. É só chamar no WhatsApp pra ver o cardápio do dia."
     },
     {
-      question: "Tem café da manhã e lanches?",
-      answer: "Sim. O Manga & Prosa é uma opção para café da manhã, lanches, salgados, pão de queijo e uma parada rápida na MG-424."
-    },
-    {
-      question: "Como falar com o Manga & Prosa?",
-      answer: "Você pode chamar pelo WhatsApp ou ligar para (31) 99089-3313."
+      q: "E café da manhã, tem?",
+      a: "Claro! Tem café passado na hora, pão de queijo quentin, salgados e quitandas. Uma parada perfeita pra começar a viagem com o pé direito."
     }
   ];
 
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section id="duvidas" className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-4xl relative z-10">
+    <section id="faq" className="py-16 md:py-24 bg-brand-strawDark">
+      <div className="max-w-[800px] mx-auto px-4 md:px-10">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-center text-brand-coffeeDark mb-12">
+          Perguntas Frequentes
+        </h2>
 
-        <div className="text-center mb-16">
-          <h2 className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-2">Dúvidas Frequentes</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-brand-coffeeDark drop-shadow-sm">
-            Perguntas sobre o Restaurante
-          </h3>
-        </div>
-
-        <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index}
-              className="bg-brand-strawDark/20 p-6 md:p-8 rounded-[2rem] border border-brand-woodLight/50 shadow-sm transition-all duration-300"
-            >
+        <div className="space-y-4">
+          {questions.map((item, i) => (
+            <div key={i} className="bg-white rounded-2xl border border-brand-woodLight overflow-hidden">
               <button
-                className="w-full text-left flex justify-between items-center"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                onClick={() => toggleAccordion(i)}
+                className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-brand-straw/50 transition-colors"
               >
-                <span className="text-xl font-bold text-brand-coffeeDark mb-3">{faq.question}</span>
-                <ChevronDown 
-                  className={`w-5 h-5 text-brand-coffee transition-transform duration-300 shrink-0 ${openIndex === index ? 'rotate-180' : ''}`}
-                />
+                <span className="font-bold text-brand-coffeeDark text-lg pr-4">{item.q}</span>
+                <ChevronDown className={`w-5 h-5 text-brand-orange transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-180" : ""}`} />
               </button>
-              
               <div 
-                className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-48 py-5 opacity-100' : 'max-h-0 py-0 opacity-0'
-                }`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === i ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
               >
-                <p className="text-brand-coffee opacity-90 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <div className="p-5 pt-0 text-brand-coffee font-medium border-t border-brand-woodLight/30 mt-2">
+                  {item.a}
+                </div>
               </div>
             </div>
           ))}

@@ -18,13 +18,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mangaeprosa.com.br"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Manga & Prosa | Restaurante em Confins perto do Aquabeat",
-  description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex no Manga & Prosa. Veja a rota.",
+  description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex bem servida no Manga & Prosa.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Manga & Prosa | Restaurante em Confins perto do Aquabeat",
-    description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex no Manga & Prosa. Veja a rota.",
+    description: "Restaurante em Confins na beira da MG-424, pertim do Aquabeat. Café da manhã, almoço caseiro, lanches e marmitex bem servida no Manga & Prosa.",
     url: siteUrl,
     siteName: "Manga & Prosa",
     locale: "pt_BR",
