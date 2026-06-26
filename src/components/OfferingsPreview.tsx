@@ -37,22 +37,7 @@ export default function OfferingsPreview() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-12">
-          {items.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div key={i} className="bg-brand-strawDark p-6 rounded-2xl border border-brand-woodLight hover:border-brand-orange transition-colors group">
-                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-5 shadow-sm group-hover:scale-110 transition-transform">
-                  <Icon className="w-7 h-7 text-brand-orange" />
-                </div>
-                <h3 className="font-bold text-brand-coffeeDark text-xl mb-3">{item.title}</h3>
-                <p className="text-brand-coffee text-sm md:text-[15px] leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
