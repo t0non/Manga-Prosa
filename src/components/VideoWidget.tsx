@@ -14,7 +14,7 @@ export default function VideoWidget() {
 
   return (
     <div 
-      className={`fixed bottom-24 left-4 sm:bottom-6 sm:left-6 z-50 transition-all duration-700 ease-out ${
+      className={`fixed bottom-[100px] left-4 sm:bottom-6 sm:left-6 z-[9999] transition-all duration-700 ease-out ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
       }`}
     >

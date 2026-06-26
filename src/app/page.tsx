@@ -23,6 +23,7 @@ export default function Home() {
         <QuickChoices />
         <TargetAudience />
         <About />
+        <QuickChoices title="Decidiu o que vai querer uai?!" />
         <Gallery />
         <OfferingsPreview />
         <Location />
