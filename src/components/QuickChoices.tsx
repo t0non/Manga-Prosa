@@ -18,7 +18,7 @@ export default function QuickChoices({ title = "Tá com fome de quê hoje?" }: {
     <section className="py-12 bg-brand-straw relative z-20 overflow-hidden">
       
       {/* Efeito Café no lado esquerdo em cima — sutil */}
-      <div className="absolute top-0 -left-20 sm:-left-16 md:-top-6 md:-left-10 w-32 h-44 md:w-40 md:h-56 opacity-100 blur-[1px] pointer-events-none z-30">
+      <div className="absolute top-0 -left-24 sm:-left-16 md:-top-6 md:-left-10 w-32 h-44 md:w-40 md:h-56 opacity-100 blur-[1px] pointer-events-none z-30">
         <Image src={efeitoCafeImg} alt="" fill className="object-contain" />
       </div>
 
