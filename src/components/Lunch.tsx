@@ -14,13 +14,6 @@ const lunchCategories = [
   { icon: <CalendarClock className="w-6 h-6 text-brand-orange" />, name: "Opções conforme disponibilidade" },
 ];
 
-const examples = [
-  "Tropeiro", "Tutu à mineira", "Feijoada", "Galinhada", 
-  "Frango com ora-pro-nóbis", "Canjiquinha com costela", 
-  "Vaca atolada", "Arroz, feijão, couve e taioba", 
-  "Saladas variadas", "Sobremesas caseiras"
-];
-
 export default function Lunch() {
   const trackEvent = (eventName: string) => {
     if (typeof window !== "undefined" && (window as any).gtag) {
@@ -55,26 +48,6 @@ export default function Lunch() {
               <h4 className="font-bold text-brand-coffeeDark text-base md:text-lg">{category.name}</h4>
             </div>
           ))}
-        </div>
-
-        {/* Exemplos de pratos */}
-        <div className="bg-brand-straw rounded-3xl p-8 md:p-12 border border-brand-woodLight/30 shadow-sm max-w-4xl mx-auto mb-12">
-          <h4 className="text-xl font-bold text-brand-coffeeDark mb-6 text-center">
-            O que pode ter na panela hoje?
-          </h4>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {examples.map((item, idx) => (
-              <span key={idx} className="bg-brand-straw text-brand-coffeeDark px-4 py-2 rounded-full text-sm font-medium border border-brand-woodLight/50">
-                {item}
-              </span>
-            ))}
-          </div>
-          
-          <div className="bg-white border-l-4 border-brand-orange p-4 rounded-r-lg">
-            <p className="text-sm md:text-base text-brand-coffeeDark/80 font-medium italic">
-              * Os pratos podem variar conforme o dia e a disponibilidade. Consulte as opções pelo WhatsApp ou diretamente no restaurante.
-            </p>
-          </div>
         </div>
 
         {/* CTAs */}

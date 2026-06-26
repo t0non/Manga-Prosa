@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Users, Info, Dessert } from "lucide-react";
+import { Users, Info } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 import pratoImg from "../../public/Imagem/prato.png";
 import alfaceImg from "../../public/Imagem/alface.png";
@@ -291,9 +291,9 @@ export default function CateringMenu() {
                       <Image 
                         src={pratoImg} 
                         alt="Ícone de Prato" 
-                        width={28} 
-                        height={28} 
-                        className="object-contain" 
+                        width={48} 
+                        height={48} 
+                        className="object-contain w-12 h-12" 
                       />
                       Pratos Principais
                     </h4>
@@ -312,7 +312,7 @@ export default function CateringMenu() {
                     {item.saladas.length > 0 && (
                       <div>
                         <h4 className="font-bold text-brand-coffeeDark text-xl mb-6 flex items-center gap-3 pb-3 border-b border-brand-woodLight/50">
-                          <Image src={alfaceImg} alt="Ícone de Salada" width={28} height={28} className="object-contain" />
+                          <Image src={alfaceImg} alt="Ícone de Salada" width={48} height={48} className="object-contain w-12 h-12" />
                           Saladas
                         </h4>
                         <ul className="space-y-3">
@@ -329,11 +329,7 @@ export default function CateringMenu() {
                     {item.sobremesas.length > 0 && (
                       <div>
                         <h4 className="font-bold text-brand-coffeeDark text-xl mb-6 flex items-center gap-3 pb-3 border-b border-brand-woodLight/50">
-                          {item.day === "Terça-feira" ? (
-                            <Image src={pudimImg} alt="Ícone de Pudim" width={28} height={28} className="object-contain" />
-                          ) : (
-                            <Dessert className="w-7 h-7 text-[#FFB020]" />
-                          )}
+                          <Image src={pudimImg} alt="Ícone de Pudim" width={48} height={48} className="object-contain w-12 h-12" />
                           Sobremesas
                         </h4>
                         <ul className="space-y-3">

@@ -85,7 +85,7 @@ export default function BreakfastMenu() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-2">Para qualquer hora do dia</h2>
           <h3 className="text-4xl md:text-5xl font-bold text-brand-coffeeDark mb-6 drop-shadow-sm">
-            Café da manhã e lanches na MG-424
+            Café da manhã e lanches
           </h3>
           <p className="text-lg text-brand-coffee opacity-90 leading-relaxed">
             Passe pelo Manga & Prosa para tomar um café, comer um pão de queijo, pedir um salgado ou fazer aquele lanche rápido em Confins.
@@ -118,11 +118,6 @@ export default function BreakfastMenu() {
           <p className="text-sm font-medium text-brand-woodDark italic mb-8">
             * Valores e itens sujeitos a alteração. Consulte a disponibilidade no restaurante ou pelo WhatsApp.
           </p>
-          <div className="bg-brand-straw p-6 rounded-2xl border border-brand-woodLight/50">
-            <p className="text-brand-coffee font-medium text-sm md:text-base leading-relaxed">
-              O Manga & Prosa fica na MG-424, em Lagoa dos Mares, Confins - MG, e é uma opção para quem procura café da manhã, lanches, salgados e uma parada gostosa para comer bem na região.
-            </p>
-          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
