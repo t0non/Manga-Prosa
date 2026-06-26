@@ -75,18 +75,12 @@ export default function Hero() {
               </a>
             </div>
 
-            <a
-              href="/#cardapio"
-              className="inline-flex items-center gap-2 text-brand-coffee font-semibold hover:text-brand-orange transition-colors text-sm mb-6"
-            >
-              <Utensils className="w-4 h-4" />
-              Ver cardápio
-            </a>
+
 
             {/* Microinformações */}
-            <div className="text-brand-coffeeDark/80 text-sm font-medium mt-2 border-t border-brand-woodLight pt-4">
+            <div className="text-brand-coffeeDark/80 text-sm font-medium mt-2 border-t border-brand-woodLight pt-4 text-center md:text-left">
               <p>MG-424, 119 • Lagoa dos Mares • Confins - MG</p>
-              <p className="flex items-center gap-1 mt-1 text-brand-green font-bold">
+              <p className="flex items-center justify-center md:justify-start gap-1 mt-1 text-brand-orange font-bold">
                 Perto do Aquabeat
               </p>
             </div>

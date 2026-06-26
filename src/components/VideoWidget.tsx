@@ -6,10 +6,19 @@ export default function VideoWidget() {
   const [isVisible, setIsVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Small delay before showing the widget for a better entrance
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1500);
-    return () => clearTimeout(timer);
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.5) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Trigger once on mount
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

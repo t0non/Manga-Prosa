@@ -1,7 +1,7 @@
 import { Sunrise, Sunset, Route } from "lucide-react";
 import Image from "next/image";
 import aquabeatLogo from "../../public/Imagem/logo_aquabeat.png";
-import aquatBeatBg from "../../public/Imagem/aquat_beat.jpg";
+import aquatBeatBg from "../../public/Imagem/aquabeatt.jpg";
 import sessao1Img from "../../public/Imagem/sessao1.png";
 
 export default function TargetAudience() {
@@ -25,19 +25,19 @@ export default function TargetAudience() {
 
   return (
     <section id="aquabeat" className="py-16 bg-brand-orange relative overflow-hidden">
-      {/* Background Image (Left half) */}
-      <div className="absolute top-0 left-0 w-1/2 h-full z-0">
+      {/* Background Image (Left / Full on mobile) */}
+      <div className="absolute top-0 left-0 w-full md:w-1/2 h-full z-0">
         <Image
           src={aquatBeatBg}
           alt="Aquabeat em Confins MG, parque aquático próximo ao Manga e Prosa"
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/40 md:bg-black/45" />
       </div>
 
-      {/* Background Image (Right half) */}
-      <div className="absolute top-0 right-0 w-1/2 h-full z-0">
+      {/* Background Image (Right half - desktop only) */}
+      <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full z-0">
         <Image
           src={sessao1Img}
           alt="Interior do restaurante Manga e Prosa em Confins MG"
