@@ -29,7 +29,7 @@ export default function Header() {
         <div className="md:hidden w-10"></div>
 
         {/* Logo */}
-        <a href="#" className="relative z-50 flex items-center justify-center md:justify-start" onClick={() => setIsMobileMenuOpen(false)}>
+        <a href="/" className="relative z-50 flex items-center justify-center md:justify-start" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="relative w-36 md:w-48 h-16 md:h-20">
             <Image
               src={logoImg}

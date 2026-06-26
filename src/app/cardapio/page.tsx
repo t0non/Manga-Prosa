@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyAction from "@/components/MobileStickyAction";
-import Lunch from "@/components/Lunch";
 import CateringMenu from "@/components/CateringMenu";
 import BreakfastMenu from "@/components/BreakfastMenu";
 import Marmitex from "@/components/Marmitex";
@@ -59,7 +58,6 @@ export default function CardapioPage() {
 
         {/* Sections */}
         <BreakfastMenu />
-        <Lunch />
         <CateringMenu />
         <Marmitex />
 

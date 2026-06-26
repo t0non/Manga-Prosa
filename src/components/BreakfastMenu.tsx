@@ -2,7 +2,7 @@
 
 import { Coffee, Utensils, Wheat, CupSoda, MapPin, MessageCircle, Phone, Cookie } from "lucide-react";
 import Image from "next/image";
-import pinIcon from "../../public/Imagem/pinlocalizacao.webp";
+import wazeIcon from "../../public/Imagem/logo_waze.png";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function BreakfastMenu() {
@@ -16,6 +16,7 @@ export default function BreakfastMenu() {
     {
       title: "Cafés e bebidas quentes",
       icon: <Coffee className="w-6 h-6 text-brand-orange" />,
+      image: "/Imagem/cafe_bebida.png",
       items: [
         { name: "Café simples", price: "Consulte" },
         { name: "Café pingado", price: "Consulte" },
@@ -25,6 +26,7 @@ export default function BreakfastMenu() {
     {
       title: "Pães e lanches",
       icon: <Wheat className="w-6 h-6 text-brand-orange" />,
+      image: "/Imagem/pao_manteiga.png",
       items: [
         { name: "Pão com manteiga", price: "Consulte" },
         { name: "Pão com mortadela", price: "Consulte" },
@@ -38,6 +40,7 @@ export default function BreakfastMenu() {
     {
       title: "Salgados",
       icon: <Utensils className="w-6 h-6 text-brand-orange" />,
+      image: "/Imagem/salgados.png",
       items: [
         { name: "Coxinha simples", price: "Consulte" },
         { name: "Coxinha com catupiry", price: "Consulte" },
@@ -54,6 +57,7 @@ export default function BreakfastMenu() {
     {
       title: "Pão de queijo",
       icon: <Cookie className="w-6 h-6 text-brand-orange" />,
+      image: "/Imagem/pao_de_queijo.png",
       items: [
         { name: "Pão de queijo", price: "Consulte" },
         { name: "Pão de queijo recheado", price: "Consulte" },
@@ -62,6 +66,7 @@ export default function BreakfastMenu() {
     {
       title: "Pastéis fritos",
       icon: <Utensils className="w-6 h-6 text-brand-orange" />,
+      image: "/Imagem/pastel_frito.png",
       items: [
         { name: "Pastel frito de carne", price: "Consulte" },
         { name: "Pastel frito de presunto e queijo", price: "Consulte" },
@@ -71,6 +76,7 @@ export default function BreakfastMenu() {
     {
       title: "Bebidas frias",
       icon: <CupSoda className="w-6 h-6 text-brand-orange" />,
+      image: "/Imagem/suco_natural.png",
       items: [
         { name: "Suco de caixinha", price: "Consulte" },
         { name: "Sucos naturais", price: "Consulte" },
@@ -94,22 +100,29 @@ export default function BreakfastMenu() {
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {categories.map((category, idx) => (
-            <div key={idx} className="bg-brand-straw p-8 rounded-[2rem] border border-brand-woodLight shadow-sm hover:shadow-md transition-shadow">
-              <h4 className="text-xl font-bold text-brand-coffeeDark mb-6 flex items-center gap-3">
-                <span className="p-2 bg-brand-straw rounded-xl border border-brand-woodLight/50">
-                  {category.icon}
-                </span>
-                {category.title}
-              </h4>
-              <ul className="space-y-4">
-                {category.items.map((item, itemIdx) => (
-                  <li key={itemIdx} className="flex justify-between items-baseline gap-2 group">
-                    <span className="text-brand-coffee font-medium group-hover:text-brand-orange transition-colors">{item.name}</span>
-                    <div className="flex-grow border-b border-dotted border-brand-coffee/30 relative -top-1"></div>
-                    <span className="text-brand-coffeeDark font-bold whitespace-nowrap text-sm">{item.price}</span>
-                  </li>
-                ))}
-              </ul>
+            <div key={idx} className="bg-brand-straw rounded-[2rem] border border-brand-woodLight shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+              {category.image && (
+                <div className="w-full h-48 relative">
+                  <Image src={category.image} alt={category.title} fill className="object-cover" />
+                </div>
+              )}
+              <div className="p-8 flex-1 flex flex-col">
+                <h4 className="text-xl font-bold text-brand-coffeeDark mb-6 flex items-center gap-3">
+                  <span className="p-2 bg-brand-straw rounded-xl border border-brand-woodLight/50">
+                    {category.icon}
+                  </span>
+                  {category.title}
+                </h4>
+                <ul className="space-y-4">
+                  {category.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex justify-between items-baseline gap-2 group">
+                      <span className="text-brand-coffee font-medium group-hover:text-brand-orange transition-colors">{item.name}</span>
+                      <div className="flex-grow border-b border-dotted border-brand-coffee/30 relative -top-1"></div>
+                      <span className="text-brand-coffeeDark font-bold whitespace-nowrap text-sm">{item.price}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
@@ -134,15 +147,15 @@ export default function BreakfastMenu() {
           </a>
 
           <a
-            href="https://www.google.com/maps/search/?api=1&query=MG-424%2C%20119%20-%20Lagoa%20dos%20Mares%2C%20Confins%20-%20MG%2C%2033500-000"
+            href="https://waze.com/ul?q=MG-424%2C%20119%20-%20Lagoa%20dos%20Mares%2C%20Confins%20-%20MG%2C%2033500-000"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackEvent('click_cardapio_rota')}
-            className="flex items-center justify-center gap-2 bg-transparent text-brand-coffee border-2 border-brand-coffee hover:bg-brand-coffee hover:text-[#FFF7ED] px-8 py-4 rounded-full font-bold transition-all md:hover:-translate-y-1 w-full sm:w-auto"
-            aria-label="Ver rota no Google Maps para o restaurante"
+            onClick={() => trackEvent('click_cardapio_rota_waze')}
+            className="flex items-center justify-center gap-2 bg-[#33CCFF] hover:bg-[#0099CC] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg md:hover:-translate-y-1 w-full sm:w-auto"
+            aria-label="Ver rota no Waze para o restaurante"
           >
-            <Image src={pinIcon} alt="Localização" width={20} height={20} className="brightness-0 invert shrink-0" />
-            Ver rota no Google Maps
+            <Image src={wazeIcon} alt="Waze" width={20} height={20} className="shrink-0" />
+            Ver rota no Waze
           </a>
 
           <a

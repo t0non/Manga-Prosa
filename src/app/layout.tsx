@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Nunito } from "next/font/google";
 import "./globals.css";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import VideoWidget from "@/components/VideoWidget";
 
 const fraunces = Fraunces({
   variable: "--font-serif",
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col font-sans antialiased text-foreground bg-background">
         {children}
         <WhatsAppWidget />
+        <VideoWidget />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Users, Info } from "lucide-react";
+
 import WhatsAppIcon from "./WhatsAppIcon";
 import pratoImg from "../../public/Imagem/prato.png";
 import alfaceImg from "../../public/Imagem/alface.png";
@@ -246,23 +246,9 @@ export default function CateringMenu() {
       <div className="container mx-auto px-4 relative z-10">
         
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-full mb-4">
-            <Users className="w-5 h-5" />
-            <span className="font-bold tracking-widest uppercase text-sm">Eventos & Grupos</span>
-          </div>
           <h2 className="text-3xl md:text-5xl font-bold text-brand-coffeeDark mb-6 leading-tight">
-            Cardápio Especial para Grupos
+            Nosso Cardápio
           </h2>
-          <p className="text-lg text-brand-coffee/90 leading-relaxed mb-4">
-            Organizando uma excursão, confraternização ou evento? Temos um cardápio planejado para atender confortavelmente grupos de até <strong>60 pessoas</strong>.
-          </p>
-          
-          <div className="bg-white p-4 rounded-xl border border-brand-woodLight shadow-sm inline-flex items-start md:items-center gap-3 text-left md:text-center mt-2 max-w-2xl">
-            <Info className="w-6 h-6 text-brand-orange shrink-0 mt-1 md:mt-0" />
-            <p className="text-sm text-brand-coffee font-medium">
-              Consumo médio considerado de ~500g por pessoa. O cardápio pode sofrer pequenas alterações conforme disponibilidade dos produtos, sempre mantendo a mesma qualidade e fartura.
-            </p>
-          </div>
         </div>
 
         {/* Menu Grid - Everything Open */}
@@ -273,7 +259,11 @@ export default function CateringMenu() {
               {/* Dia Centralizado */}
               <div className="bg-brand-coffeeDark text-brand-straw py-6 text-center border-b-4 border-brand-orange">
                 <h3 className="font-serif text-3xl md:text-4xl font-bold">
-                  {item.day}
+                  {item.day === "Opções Coringa" ? (
+                    <>Opções <span className="text-brand-orange">Coringa</span></>
+                  ) : (
+                    item.day
+                  )}
                 </h3>
                 {item.theme && (
                   <p className="text-brand-orange font-medium mt-2 text-lg tracking-wide uppercase">
@@ -352,17 +342,17 @@ export default function CateringMenu() {
         {/* CTA */}
         <div className="text-center">
           <p className="text-brand-coffeeDark font-bold text-lg mb-6">
-            Gostou das opções? Peça um orçamento para o seu grupo!
+            Ficou com alguma dúvida ou quer saber o prato do dia?
           </p>
           <a
-            href="https://wa.me/5531990893313?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20o%20card%C3%A1pio%20de%20grupos%2Feventos."
+            href="https://wa.me/5531990893313?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20card%C3%A1pio%20do%20Manga%20%26%20Prosa."
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackEvent("click_orcamento_grupos")}
+            onClick={() => trackEvent("click_duvida_cardapio")}
             className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5"
           >
             <WhatsAppIcon className="w-5 h-5" />
-            Solicitar orçamento pelo WhatsApp
+            Fale conosco pelo WhatsApp
           </a>
         </div>
 
