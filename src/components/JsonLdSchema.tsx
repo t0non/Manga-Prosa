@@ -4,7 +4,7 @@ export default function JsonLdSchema() {
   const restaurantSchema = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "Manga & Prosa",
+    "name": "Restaurante Manga & Prosa",
     "url": siteUrl,
     "image": [
       `${siteUrl}/Imagem/fora1.jpg`,
@@ -62,7 +62,7 @@ export default function JsonLdSchema() {
   const webSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Manga & Prosa",
+    "name": "Restaurante Manga & Prosa",
     "url": siteUrl,
     "description": "Restaurante em Confins - MG. Comida caseira mineira, café da manhã, almoço bem servido e marmitex na beira da MG-424, pertim do Aquabeat.",
     "potentialAction": {

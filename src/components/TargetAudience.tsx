@@ -33,7 +33,6 @@ export default function TargetAudience() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/55" />
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 relative z-10">

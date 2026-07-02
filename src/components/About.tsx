@@ -33,13 +33,13 @@ export default function About() {
           <div className="flex-1 order-2 md:order-1">
             <div className="space-y-5 text-brand-coffee text-base md:text-lg leading-relaxed">
               <p>
-                Sabe aquela comida feita com calma, no capricho e com tempero de casa? É assim que a gente prepara tudo aqui no Manga & Prosa.
+                Sabe aquela comida feita com calma, no capricho e com tempero de casa? É assim que a gente prepara tudo aqui no restaurante Manga & Prosa.
               </p>
               <p>
-                Um cantinho acolhedor pra quem quer comer bem, descansar da correria e prosear sem pressa. Seja pra um café quentin logo cedo, um almoço bem servido no meio do dia ou uma marmitex pra levar.
+                Um cantinho acolhedor pra quem quer comer bem, descansar da correria e prosear sem pressa. Seja pra um café quentin logo cedo, um almoço caseiro bem servido no meio do dia ou uma marmitex pra levar.
               </p>
               <p>
-                A gente fica na beira da MG-424, em Lagoa dos Mares, Confins. De portas abertas pra quem passa por aqui, mora na região ou tá a caminho do Aquabeat.
+                Nosso restaurante fica na beira da MG-424, em Lagoa dos Mares, Confins. De portas abertas pra quem passa por aqui, mora na região ou tá a caminho do Aquabeat.
               </p>
             </div>
           </div>

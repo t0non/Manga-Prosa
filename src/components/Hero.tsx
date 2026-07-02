@@ -60,12 +60,12 @@ export default function Hero() {
 
           {/* H1 */}
           <h1 className="font-serif text-white font-bold leading-[1.08] text-[2.1rem] sm:text-4xl md:text-5xl drop-shadow-lg">
-            Comida mineira no fogão a lenha
+            Restaurante de comida mineira no fogão a lenha
           </h1>
 
           {/* Subtítulo */}
-          <p className="text-white/80 leading-relaxed text-[15px] md:text-lg max-w-[440px]">
-            Almoço bem servido, lanches e porções em Confins. Uma parada gostosa pertim do Aquabeat.
+          <p className="text-white/80 leading-relaxed text-[15px] md:text-lg max-w-[480px]">
+            O <strong>Manga & Prosa</strong> é a sua parada perfeita em Confins! Almoço caseiro, café da manhã, lanches e marmitex na beira da MG-424, pertim do Aquabeat.
           </p>
 
           {/* CTAs */}
