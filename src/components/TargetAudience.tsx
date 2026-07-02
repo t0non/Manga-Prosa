@@ -8,18 +8,18 @@ export default function TargetAudience() {
   const audiences = [
     {
       icon: Sunrise,
-      title: "Antes do passeio",
-      desc: "Café quentin, quitandas e lanches pra encher o tanque antes de curtir o Aquabeat."
+      title: "Indo pro Aquabeat?",
+      desc: "Comece o dia com o pé direito! Café da manhã farto, pão de queijo quentinho e energia de sobra pra curtir as piscinas."
     },
     {
       icon: Route,
-      title: "Passando pela MG-424",
-      desc: "Parada fácil e gostosa no caminho. Café, lanche e almoço caseiro te esperando."
+      title: "Na MG-424 a trabalho?",
+      desc: "Fugindo da fome na estrada? Faça uma parada rápida e saboreie a melhor marmitex e almoço caseiro da região de Confins."
     },
     {
       icon: Sunset,
-      title: "Depois do passeio",
-      desc: "Almoço caseiro e comida bem servida pra repor as energias na volta pra casa."
+      title: "Voltando do parque?",
+      desc: "Bateu aquele cansaço depois da diversão? Venha repor as energias com nosso autêntico almoço mineiro no fogão a lenha!"
     }
   ];
 
@@ -68,15 +68,15 @@ export default function TargetAudience() {
             return (
               <div
                 key={i}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl flex flex-col items-center text-center hover:bg-white/15 transition-colors"
+                className="bg-white p-6 rounded-2xl flex flex-col items-center text-center shadow-xl hover:-translate-y-1 transition-transform"
               >
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 shrink-0">
-                  <Icon className="w-6 h-6 text-white" />
+                <div className="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center mb-4 shrink-0">
+                  <Icon className="w-7 h-7 text-brand-orange" />
                 </div>
-                <h3 className="font-bold text-white text-lg mb-2 leading-tight">
+                <h3 className="font-bold text-brand-coffeeDark text-lg mb-2 leading-tight">
                   {aud.title}
                 </h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-brand-coffee text-sm leading-relaxed font-medium">
                   {aud.desc}
                 </p>
               </div>
