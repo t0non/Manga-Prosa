@@ -24,7 +24,7 @@ export default function WhatsAppWidget() {
         alt="WhatsApp do Manga e Prosa"
         width={64}
         height={64}
-        className="object-contain drop-shadow-[0_8px_16px_rgba(34,197,94,0.4)]"
+        className="object-contain"
       />
       
       {/* Tooltip opcional (descomente se quiser um balão escrito "Fale conosco") */}

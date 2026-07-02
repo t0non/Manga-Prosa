@@ -58,8 +58,9 @@ export default function Gallery() {
             href="https://www.google.com/maps/search/?api=1&query=MG-424%2C%20119%20-%20Lagoa%20dos%20Mares%2C%20Confins%20-%20MG%2C%2033500-000"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-brand-orange hover:bg-[#A84F28] text-white px-8 py-4 rounded-full font-bold transition-all shadow-md hover:-translate-y-0.5 w-full sm:w-auto"
+            className="flex items-center justify-center gap-2 bg-[#33ccff] hover:bg-[#2bb8e6] text-[#052b42] px-8 py-4 rounded-full font-bold transition-all shadow-md hover:-translate-y-0.5 w-full sm:w-auto"
           >
+            <Image src={wazeIcon} alt="Waze" width={24} height={24} className="object-contain" />
             Como chegar
           </a>
           <a

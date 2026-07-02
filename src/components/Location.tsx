@@ -17,12 +17,12 @@ export default function Location() {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
 
           {/* Info */}
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
             <p className="text-brand-orange font-bold text-sm uppercase tracking-widest mb-3">Como chegar</p>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               Onde comer em Confins na beira da MG-424
             </h2>
-            <p className="text-white/80 text-base mb-8 leading-relaxed">
+            <p className="text-white/80 text-base mb-8 leading-relaxed max-w-xl">
               O Manga & Prosa fica em Lagoa dos Mares, Confins - MG, na MG-424, número 119. Uma parada fácil pra quem está indo ou voltando do Aquabeat, trabalhando pela região ou procurando almoço caseiro por perto.
             </p>
 
@@ -40,7 +40,7 @@ export default function Location() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Phone className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
+                <WhatsAppIcon className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-bold text-brand-coffeeDark mb-1">Telefone / WhatsApp</h3>
                   <p className="text-brand-coffee text-sm">(31) 99089-3313</p>
