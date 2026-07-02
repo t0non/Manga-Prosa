@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Camera, Globe, MapPin, Phone, MessageCircle, Map } from "lucide-react";
+import { Camera, Globe, MapPin, Phone, MessageCircle, Map, Info } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 import logoImg from "../../public/Imagem/logo.png";
 import pinIcon from "../../public/Imagem/pinlocalizacao.webp";
@@ -27,7 +27,7 @@ export default function Footer() {
               Vem viver uma boa prosa no Manga & Prosa
             </h2>
             <p className="text-brand-coffee text-lg md:text-xl font-medium mb-8">
-              Café quentin, almoço caseiro, marmitex bem servida e um lugar tranquilo para comer sem pressa na beira da MG-424, em Confins.
+              O melhor restaurante em Confins - MG. Café quentin, almoço caseiro no fogão a lenha, marmitex bem servida e um lugar tranquilo na beira da MG-424, pertim do Aquabeat.
             </p>
             
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
@@ -63,52 +63,80 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          <div className="md:col-span-1">
+        <div className="grid md:grid-cols-12 gap-12 mb-16">
+          <div className="md:col-span-5">
             <Link href="/" className="inline-block mb-6 hover:opacity-90 transition-opacity" aria-label="Voltar para a página inicial">
-              <Image src={logoImg} alt="Manga & Prosa" className="h-20 w-auto object-contain drop-shadow-sm" />
-              <span className="sr-only">Manga & Prosa</span>
+              <Image src={logoImg} alt="Manga & Prosa Restaurante Confins" className="h-24 w-auto object-contain drop-shadow-sm" />
+              <span className="sr-only">Manga & Prosa - Restaurante em Confins</span>
             </Link>
-            <p className="text-brand-strawDark leading-relaxed mb-6 opacity-90">
-              Comida regional de verdade, em meio à natureza, com aquele gostinho de interior em Confins.
-            </p>
+            <div className="text-brand-strawDark leading-relaxed mb-6 opacity-90 space-y-4">
+              <p>
+                O <strong>Manga & Prosa</strong> é referência quando o assunto é <strong>comida caseira mineira em Confins</strong>. Mais que um restaurante na MG-424, somos um ponto de encontro tradicional para quem busca sabor autêntico, seja no <strong>café da manhã farto</strong>, no <strong>almoço no fogão a lenha</strong>, ou na <strong>marmitex diária</strong>.
+              </p>
+              <p className="text-sm">
+                Localização privilegiada na região metropolitana de BH, servindo moradores locais, ciclistas, viajantes e sendo a parada obrigatória e o restaurante mais procurado perto do <strong>parque aquático Aquabeat</strong>. Ambiente familiar cercado pela natureza.
+              </p>
+            </div>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/mangaeprosa" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Instagram" className="w-10 h-10 rounded-full bg-brand-woodDark flex items-center justify-center text-brand-straw hover:bg-brand-orange hover:text-[#FFF7ED] transition-colors shadow-sm">
+              <a href="https://www.instagram.com/mangaeprosa" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso Instagram e veja nossas comidas e ambiente" className="w-10 h-10 rounded-full bg-brand-woodDark flex items-center justify-center text-brand-straw hover:bg-brand-orange hover:text-[#FFF7ED] transition-colors shadow-sm">
                 <InstagramIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
 
-          <div>
-            <h4 className="text-lg font-bold text-brand-straw mb-6">Links Rápidos</h4>
+          <div className="md:col-span-3">
+            <h4 className="text-xl font-bold text-brand-straw mb-6 flex items-center gap-2">
+              <Info className="w-5 h-5 text-brand-orange" />
+              Explore o Site
+            </h4>
             <ul className="space-y-3 text-brand-strawDark">
               <li><Link href="#sobre" className="hover:text-brand-orange transition-colors">Nossa História</Link></li>
-              <li><Link href="#cardapio" className="hover:text-brand-orange transition-colors">Cardápio</Link></li>
-              <li><Link href="#ambiente" className="hover:text-brand-orange transition-colors">O Espaço</Link></li>
-              <li><Link href="#localizacao" className="hover:text-brand-orange transition-colors">Como Chegar</Link></li>
+              <li><Link href="#cardapio" className="hover:text-brand-orange transition-colors">Cardápio de Almoço Caseiro</Link></li>
+              <li><Link href="#cardapio" className="hover:text-brand-orange transition-colors">Opções de Café da Manhã</Link></li>
+              <li><Link href="#cardapio" className="hover:text-brand-orange transition-colors">Marmitex em Confins</Link></li>
+              <li><Link href="#ambiente" className="hover:text-brand-orange transition-colors">Nosso Ambiente (Galeria)</Link></li>
+              <li><Link href="#localizacao" className="hover:text-brand-orange transition-colors">Como Chegar na MG-424</Link></li>
+              <li><Link href="#faq" className="hover:text-brand-orange transition-colors">Dúvidas Comuns</Link></li>
             </ul>
           </div>
 
-          <div className="md:col-span-2">
-            <h4 className="text-lg font-bold text-brand-straw mb-6">Contato e Endereço</h4>
+          <div className="md:col-span-4">
+            <h4 className="text-xl font-bold text-brand-straw mb-6 flex items-center gap-2">
+              <Map className="w-5 h-5 text-brand-orange" />
+              Contato e Localização
+            </h4>
             <address className="not-italic">
               <ul className="space-y-4 text-brand-strawDark">
                 <li className="flex gap-3">
                   <MapPin className="w-5 h-5 text-brand-orange shrink-0 mt-1" />
-                  <span>Manga & Prosa<br />MG-424, 119 - Lagoa dos Mares<br />Confins - MG, 33500-000</span>
+                  <div>
+                    <span className="font-bold text-brand-straw">Endereço Principal:</span>
+                    <br />Restaurante Manga & Prosa
+                    <br />Rodovia MG-424, número 119
+                    <br />Bairro Lagoa dos Mares
+                    <br />Confins - MG, CEP 33500-000
+                  </div>
                 </li>
-                <li className="flex gap-3">
+                <li className="flex gap-3 items-center">
                   <Phone className="w-5 h-5 text-brand-orange shrink-0" />
-                  <span><a href="tel:+5531990893313" className="hover:text-brand-orange transition-colors">(31) 99089-3313</a></span>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-brand-straw">Telefone e Encomendas:</span>
+                    <a href="tel:+5531990893313" className="hover:text-brand-orange transition-colors text-lg font-medium">(31) 99089-3313</a>
+                  </div>
                 </li>
               </ul>
             </address>
           </div>
         </div>
 
-        <div className="border-t border-brand-coffee pt-8 flex flex-col items-center justify-center gap-4 text-sm text-brand-strawDark pb-16 md:pb-0 opacity-80 text-center">
+        {/* SEO Tags Escondidas mas semânticas - Regiões Atendidas */}
+        <div className="mb-10 pt-8 border-t border-brand-coffee/50 text-xs text-brand-strawDark/60 leading-relaxed text-justify">
+          <strong>Áreas de Atendimento e Referências Locais:</strong> Restaurante em Confins MG, Comida Caseira Mineira na MG-424, Almoço perto do Aquabeat, Onde comer em Confins, Marmitex e Quentinhas delivery e retirada em Confins, Café da manhã na MG 424. Próximo a Lagoa dos Mares, Pedro Leopoldo, Vespasiano, São José da Lapa e Lagoa Santa. Referência de gastronomia local para viajantes, caminhoneiros, famílias e trabalhadores da região metropolitana de Belo Horizonte.
+        </div>
+
+        <div className="border-t border-brand-coffee pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-brand-strawDark pb-16 md:pb-0 opacity-80 text-center md:text-left">
           <div className="flex flex-col gap-1">
-            <p>© {new Date().getFullYear()} Restaurante Manga & Prosa. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Restaurante Manga & Prosa Confins. Todos os direitos reservados.</p>
             <p>CNPJ: 61.574.605/0001-80</p>
           </div>
           <div className="flex items-center gap-2">
@@ -117,9 +145,9 @@ export default function Footer() {
               href="https://topmarketingbh.com.br/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity text-brand-orange hover:text-brand-woodLight font-bold"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity text-brand-orange hover:text-brand-straw font-bold"
             >
-              <Image src={topLogo} alt="Top Marketing BH" width={24} height={24} className="rounded-sm object-cover" />
+              <Image src={topLogo} alt="Agência Top Marketing BH" width={24} height={24} className="rounded-sm object-cover" />
               Top Marketing BH
             </a>
           </div>
