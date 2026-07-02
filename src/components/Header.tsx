@@ -21,7 +21,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-2" : "bg-white py-3 md:py-4"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-1 md:py-1" : "bg-white py-2 md:py-2"
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 flex items-center justify-between">
@@ -31,7 +31,7 @@ export default function Header() {
 
         {/* Logo */}
         <a href="/" className="relative z-50 flex items-center justify-center md:justify-start" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="relative w-36 md:w-48 h-16 md:h-20">
+          <div className="relative w-32 md:w-40 h-14 md:h-16">
             <Image
               src={logoImg}
               alt="Logo do restaurante Manga e Prosa em Confins MG"
