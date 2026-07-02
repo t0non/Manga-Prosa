@@ -116,7 +116,7 @@ export default function Reviews() {
         {/* Fade direita */}
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-brand-straw to-transparent z-10 pointer-events-none" />
 
-        <div className="flex" style={{ animation: "scroll-reviews 35s linear infinite" }}>
+        <div className="flex animate-scroll-reviews">
           {doubled.map((review, i) => (
             <ReviewCard key={i} review={review} />
           ))}
@@ -124,22 +124,15 @@ export default function Reviews() {
       </div>
 
       {/* CTA */}
-      <div className="max-w-[1200px] mx-auto px-4 md:px-10 mt-12 flex flex-col sm:flex-row justify-center gap-4">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-10 mt-12 flex justify-center">
         <a
           href="https://www.google.com/search?q=Manga+%26+Prosa+Confins+MG#lrd=0x0:0x0,1"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 bg-brand-coffeeDark hover:bg-brand-coffee text-white px-8 py-4 rounded-full font-bold transition-all shadow-md w-full sm:w-auto"
         >
+          <GoogleIcon />
           Ver avaliações no Google
-        </a>
-        <a
-          href="https://www.google.com/search?q=Manga+%26+Prosa+Confins+MG#lrd=0x0:0x0,3"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-white border-2 border-brand-coffeeDark text-brand-coffeeDark hover:bg-brand-straw px-8 py-4 rounded-full font-bold transition-all w-full sm:w-auto"
-        >
-          Deixar uma avaliação
         </a>
       </div>
     </section>
