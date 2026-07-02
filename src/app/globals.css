@@ -51,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-scroll-reviews {
-  animation: scroll-reviews 10s linear infinite;
+  animation: scroll-reviews 4s linear infinite;
 }
 
 @media (min-width: 768px) {
   .animate-scroll-reviews {
-    animation: scroll-reviews 20s linear infinite;
+    animation: scroll-reviews 12s linear infinite;
   }
 }
