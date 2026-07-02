@@ -4,7 +4,6 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
-  // Primeira pergunta aberta por padrão — garante que o Google leia o conteúdo
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const questions = [
@@ -47,27 +46,32 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-brand-strawDark" aria-labelledby="faq-heading">
+    <section id="faq" className="py-16 md:py-24 bg-white" aria-labelledby="faq-heading">
       <div className="max-w-[800px] mx-auto px-4 md:px-10">
-        <h2 id="faq-heading" className="font-serif text-3xl md:text-4xl font-bold text-center text-brand-coffeeDark mb-4">
-          Perguntas Frequentes
-        </h2>
-        <p className="text-center text-brand-coffee font-medium text-[15px] mb-12 max-w-xl mx-auto">
-          Dúvidas sobre o Manga &amp; Prosa? A gente responde!
-        </p>
 
-        {/* Using div-based accordion with first item open by default for SEO */}
-        <div className="space-y-4" role="list">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <p className="text-brand-orange font-bold text-sm uppercase tracking-widest mb-3">Dúvidas</p>
+          <h2 id="faq-heading" className="font-serif text-3xl md:text-4xl font-bold text-brand-coffeeDark mb-4">
+            Perguntas Frequentes
+          </h2>
+          <p className="text-brand-coffee text-base">
+            Dúvidas sobre o Manga &amp; Prosa? A gente responde!
+          </p>
+        </div>
+
+        {/* Accordion */}
+        <div className="space-y-3" role="list">
           {questions.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-brand-woodLight overflow-hidden" role="listitem">
+            <div key={i} className="bg-brand-straw rounded-2xl border border-brand-woodLight overflow-hidden" role="listitem">
               <button
                 onClick={() => toggleAccordion(i)}
-                className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-brand-straw/50 transition-colors"
+                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-brand-woodLight/20 transition-colors"
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}
                 id={`faq-question-${i}`}
               >
-                <span className="font-bold text-brand-coffeeDark text-lg pr-4">{item.q}</span>
+                <span className="font-bold text-brand-coffeeDark text-base pr-4">{item.q}</span>
                 <ChevronDown className={`w-5 h-5 text-brand-orange transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-180" : ""}`} />
               </button>
               <div
@@ -76,13 +80,14 @@ export default function FAQ() {
                 aria-labelledby={`faq-question-${i}`}
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === i ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
               >
-                <div className="p-5 pt-0 text-brand-coffee font-medium border-t border-brand-woodLight/30 mt-2 leading-relaxed">
+                <div className="px-6 pb-5 text-brand-coffee text-sm leading-relaxed border-t border-brand-woodLight/40 pt-4">
                   {item.a}
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

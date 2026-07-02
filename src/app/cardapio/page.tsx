@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MobileStickyAction from "@/components/MobileStickyAction";
 import CateringMenu from "@/components/CateringMenu";
 import BreakfastMenu from "@/components/BreakfastMenu";
 import Marmitex from "@/components/Marmitex";
@@ -35,26 +34,7 @@ export default function CardapioPage() {
   return (
     <>
       <Header />
-      <main className="pt-[5.5rem] pb-[72px] md:pb-0 bg-brand-straw">
-        
-        {/* Page Header */}
-        <div className="bg-brand-coffeeDark py-16 md:py-24 text-center px-4 relative overflow-hidden">
-          <div className="relative z-10 max-w-3xl mx-auto">
-            <p className="text-brand-orange font-bold tracking-widest uppercase text-sm mb-3">
-              Manga &amp; Prosa · Confins, MG
-            </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-straw mb-6">
-              Cardápio do Manga &amp; Prosa
-            </h1>
-            <p className="text-xl text-brand-woodLight font-medium mb-6">
-              Café da manhã, almoço caseiro mineiro, lanches e marmitex em Confins, na beira da MG-424.
-            </p>
-            <div className="text-brand-straw/80 text-sm max-w-xl mx-auto space-y-1">
-              <p>* Os itens podem variar conforme o dia e a disponibilidade.</p>
-              <p>* Consulte valores e opções pelo WhatsApp ou diretamente no restaurante.</p>
-            </div>
-          </div>
-        </div>
+      <main className="pt-[5.5rem] bg-brand-straw">
 
         {/* Sections */}
         <BreakfastMenu />
@@ -63,7 +43,6 @@ export default function CardapioPage() {
 
       </main>
       <Footer />
-      <MobileStickyAction />
     </>
   );
 }
