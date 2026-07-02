@@ -35,7 +35,7 @@ export default function VideoWidget() {
         </div>
 
         {/* Circular Video Container */}
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-xl bg-brand-woodDark relative">
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-white shadow-xl bg-brand-woodDark relative">
           <video
             ref={videoRef}
             src="/Imagem/video_restaurante2.mp4"

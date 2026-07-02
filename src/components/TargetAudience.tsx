@@ -1,7 +1,7 @@
 import { Sunrise, Sunset, Route } from "lucide-react";
 import Image from "next/image";
 import aquabeatLogo from "../../public/Imagem/logo_aquabeat.png";
-import aquatBeatBg from "../../public/Imagem/aquabeatt.jpg";
+import aquatBeatBg from "../../public/Imagem/aquabeatch.jpg";
 import sessao1Img from "../../public/Imagem/sessao1.png";
 
 export default function TargetAudience() {
@@ -33,6 +33,7 @@ export default function TargetAudience() {
           fill
           className="object-cover"
         />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 relative z-10">
