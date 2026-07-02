@@ -18,13 +18,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Reviews />
         <QuickChoices />
         <TargetAudience />
         <About />
         <QuickChoices title="Decidiu o que vai querer uai?!" />
         <Gallery />
         <Location />
-        <Reviews />
         <FAQ />
         <FinalCTA />
       </main>
